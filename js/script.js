@@ -20,7 +20,7 @@ if (firstNumber < secondNumber) {
 var age = 11;
 var minimumAge = "13";
 
-if (age > minimumAge) {
+if (age >= parseInt(minimumAge)) {
     console.log("Welcome, you are old enough");
 } else {
     console.log("I'm sorry, you're not old enough");
@@ -35,10 +35,10 @@ if (age > minimumAge) {
 var income = "11.050";
 var maximumIncome = "13.075";
 
-if (income <= maximumIncome) {
-    console.log("You passed the income check!");
+if (parseFloat(income) <= parseFloat(maximumIncome)) {
+    console.log("You passed the income check!. Maximum income requirement met");
 } else {
-    console.log("I'm sorry, you'reincome is too high!");
+    console.log("I'm sorry, you'reincome is too high! Maximum income requirement not met");
 }
 
 //Question 4: Fix this code:
@@ -64,6 +64,16 @@ if (invoicePaid === false) {
     console.log("Not paid");
 }
 
+// or
+if (invoicePaid !== true) {
+    console.log("Not paid");
+}
+
+// or
+if (!invoicePaid) {
+    console.log("Not paid");
+}
+
 //Question 6: Given these two variables
 //var selectedNumber = 11;
 //var winningNumber = "15";
@@ -73,7 +83,7 @@ if (invoicePaid === false) {
 var selectedNumber = 11;
 var winningNumber = "15";
 
-if (selectedNumber !== winningNumber) {
+if (selectedNumber !== parseInt(winningNumber)) {
     console.log("You lose again");
 }
 
@@ -113,3 +123,29 @@ switch (dayOfTheWeek) {
 }
 
 console.log(day);
+
+// LOOPS
+
+for (var i = 1; i <= 10; i++) {
+    console.log(i);
+}
+
+//LOOPS - Lesson Task 4
+
+//Question 1
+//Write a loop that logs the numbers 0 to 7.
+
+for (var i = 0; i <= 7; i++) {
+    console.log(i);
+}
+
+//Question 2: Write a loop that logs the numbers 10 to 1. Count down from 10 to 1.
+
+for (var i = 10; i >= 0; i = i - 1) {
+    console.log(i);
+}
+
+//Question 3: Write a loop that counts from 10 to 20, and log only the odd numbers. 11, 13, 15, etc
+for (var i = 11; i <= 19; i = i + 2) {
+    console.log(i);
+}
