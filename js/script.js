@@ -145,7 +145,23 @@ for (var i = 10; i >= 0; i = i - 1) {
     console.log(i);
 }
 
+//or
+
+for (var i = 10; i > 0; i--) {
+    console.log(i);
+}
+
 //Question 3: Write a loop that counts from 10 to 20, and log only the odd numbers. 11, 13, 15, etc
 for (var i = 11; i <= 19; i = i + 2) {
     console.log(i);
+}
+
+//Fasit
+// start at 10, and loop while i is less than or equal to 20
+// use the remainder operator to determine if the number is odd
+// any number that returns a remainder after being divided by 2 is an odd number
+for (var i = 10; i <= 20; i++) {
+    if (i % 2 !== 0) {
+        console.log(i);
+    }
 }
